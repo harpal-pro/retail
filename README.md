@@ -15,7 +15,7 @@ How to run :-
   Import/clone repository retail-backend, build project using gradle and run springboot project.
   check your browser :-http://localhost:8080/retail/shops/
   
-<b> Fronend :- 
+<b> Frontend :- 
   Import/clone repository retail-frontend , build project using `ng build` and run `ng serve`.
   check your browser : http://localhost:4200
   
