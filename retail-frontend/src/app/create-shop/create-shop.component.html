@@ -1,0 +1,134 @@
+<div id="createShop" class="well form-horizontal">
+     
+ <form role="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <div class="form-group" >
+            <label class="col-md-2 control-label">ShopName</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-home">
+                        </i>
+                    </span>
+                    <input id="shopName" formControlName="shopName" placeholder="Enter ShopName.." class="form-control" value="" type="text" required >
+                </div>
+                <div *ngIf="registerForm.controls['shopName'].invalid && (registerForm.controls['shopName'].dirty || registerForm.controls['shopName'].touched)" class="alert alert-danger">
+                        <div *ngIf="registerForm.controls['shopName'].errors.required">
+                        ShopName is required.
+                      </div>
+                    </div>
+             
+            </div>
+
+
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Select Address</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-map-marker">
+                        </i>
+                    </span>
+                    <input id="location_search" formControlName="address" placeholder="Search Address"
+                        class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" required="true" value="" type="text">
+                </div>
+                <div *ngIf="registerForm.controls['address'].invalid && (registerForm.controls['address'].dirty || registerForm.controls['address'].touched)" class="alert alert-danger">
+                        <div *ngIf="registerForm.controls['address'].errors.required">
+                        Address/Location is required.
+                      </div>
+                    </div>
+         
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Category</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-list-alt">
+                        </i>
+                    </span>
+                    <input id="category" formControlName="category" placeholder="Enter Category.." class="form-control"  required="true" value="" type="text">
+                </div>
+                <div *ngIf="registerForm.controls['category'].invalid && (registerForm.controls['category'].dirty || registerForm.controls['category'].touched)" class="alert alert-danger">
+                        <div *ngIf="registerForm.controls['category'].errors.required">
+                        Category is required.
+                      </div>
+                    </div>
+         
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md-2 control-label">Longitude</label>
+            <div class="col-md-4 inputGroupContainer">
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-map-marker">
+                        </i>
+                    </span>
+                    <input id="longitude" formControlName="longitude" placeholder="longitude" class="form-control"  required="true"
+                        value='' type="text">
+                </div>
+                <div *ngIf="registerForm.controls['longitude'].invalid && (registerForm.controls['longitude'].dirty || registerForm.controls['longitude'].touched)" class="alert alert-danger">
+                        <div *ngIf="registerForm.controls['longitude'].errors.required">
+                        Longitude is required.
+                      </div>
+                    </div>
+         
+            </div>
+         
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Latitude</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-map-marker">
+                        </i>
+                    </span>
+                    <input id="latitude" formControlName="latitude" placeholder="Latitude" class="form-control" required="true"
+                        value='' type="text">
+                </div>
+                <div *ngIf="registerForm.controls['latitude'].invalid && (registerForm.controls['latitude'].dirty || registerForm.controls['latitude'].touched)" class="alert alert-danger">
+                        <div *ngIf="registerForm.controls['latitude'].errors.required">
+                        Latitude is required.
+                      </div>
+                    </div>
+         
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">OwnerName</label>
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user">
+                            </i>
+                        </span>
+                        <input id="ownerName" formControlName="ownerName" placeholder="Shop OwnerName.. " class="form-control" required="true" value="" type="text">
+                    </div>
+                </div>
+                <div *ngIf="registerForm.controls['ownerName'].invalid && (registerForm.controls['ownerName'].dirty || registerForm.controls['ownerName'].touched)" class="alert alert-danger">
+                        <div *ngIf="registerForm.controls['ownerName'].errors.required">
+                        OwnerName is required.
+                      </div>
+                    </div>
+         
+            </div>
+        </div>
+        <div class="form-group">
+                <button class="btn btn-primary">Register</button>
+            </div>
+    </fieldset>
+</form>
+
+</div>

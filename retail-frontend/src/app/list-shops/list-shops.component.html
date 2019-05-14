@@ -1,0 +1,41 @@
+
+<div style="margin-top:30px;" class="container"  >
+      <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-primary" id="shopPanel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Shops </h3>
+          </div>
+      <table class="table table" id="dev-table" >
+            <thead>
+              <tr>
+                <th class="info">ShopName</th>
+                <th class="info">Category</th>
+                <th class="info">Address</th>
+                <th class="info">Langitude</th>
+                <th class="info">Langitude</th>
+                <th class="info">OwnerName</th>
+              </tr>
+            </thead>
+            <tbody  *ngIf="pageResponse?.content">
+              <tr *ngFor="let shop of pageResponse.content">
+                <td data-table-header>{{shop.shopName}}</td>
+                <td>{{shop.category}}</td>
+                <td>{{shop.address}}</td>
+                <td>{{shop.longitude}}</td>
+                <td>{{shop.latitude}}</td>
+                <td>{{shop.ownerName}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="...">
+    <ul style="margin-left: 180px;margin-top:-10px;" class="pagination"  *ngIf="pageResponse?.content" >
+      <li *ngFor="let page of ' '.repeat(pageResponse.totalPages).split(''), let i = index " (click)="onSelect(i)" [class.active]="i === selectedPage" class="page-item"><a class="page-link" href="#">{{i}}</a></li>
+    </ul>
+  </nav>
+
+  

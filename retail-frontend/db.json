@@ -1,0 +1,22 @@
+{
+    "shops":[
+    {
+    "id": 1,
+    "shopName" : "TestShop",
+    "category" : "TestCategory",
+    "address" : "TestAddress",
+    "latitude" : "TestLatitude",
+    "longitude" : "TestLongtidue",
+    "ownerName" : "TestOwnerName"
+    },
+    {
+        "id": 2,
+        "shopName" : "TestShop-1",
+        "category" : "TestCategory-2",
+        "address" : "TestAddress-2",
+        "latitude" : "TestLatitude-2",
+        "longitude" : "TestLongtidue-2",
+        "ownerName" : "TestOwnerName-2"
+        }
+]
+}
